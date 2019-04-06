@@ -6,13 +6,23 @@ const db = require('./config/keys').mongoURI;
 const users = require('./routes/api/users');
 const profile = require('./routes/api/profiles');
 const posts = require('./routes/api/posts');
+const passport = require('passport');
 
+//Body parser middleware
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extend: false}))
 
 //Connect to db
 mongoose
     .connect(db)
     .then(() => console.log('MongoDb connected'))
     .catch(err => console.log(err));
+
+// Passport middleware
+app.use(passport.initialize());
+
+//passport config
+require('./config/passport')(passport);
 
 // First route
 app.get('/', (req, res) => res.send('Hello'));
