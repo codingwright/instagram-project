@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const app = express();
 const bodyparser = require('body-parser');
+const app = express();
 
 const db = require('./config/keys').mongoURI;
 const users = require('./routes/api/users');
@@ -28,16 +28,9 @@ require('./config/passport')(passport);
 // First route
 app.get('/', (req, res) => res.send('Hello'));
 
-<<<<<<< HEAD
-const port = process.env.PORT || 5200;
-app.listen(port, () => console.log(`Server running on port ${port}`));
-=======
 app.use('/api/users', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
-
-
 const port = process.env.PORT || 5200;
 app.listen(port, () => console.log(`Server running on port ${port}`));
->>>>>>> 620ac38eba4663e0872a24b7e7e431025fa870e7

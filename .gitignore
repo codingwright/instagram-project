@@ -1,3 +1,5 @@
 /node_modules
 package-lock.json
 
+# Will undo the grayed out comment for /config once we're ready to turn in
+# /config
