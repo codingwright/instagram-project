@@ -20,8 +20,8 @@ module.exports = function validateProfileInput(data) {
     }
   }
   if (!isEmpty(data.phonenumber)) {
-    if (!Validator.isNumeric(data.phonenumber)) {
-      errors.phonenumber = 'You only can put numbers in this field';
+    if (!Validator.isMobilePhone(data.phonenumber)) {
+      errors.phonenumber = 'It is not valid phonenumber';
     }
   }
 
