@@ -9,7 +9,10 @@ const posts = require('./routes/api/posts');
 
 
 //Connect to db
-mongoose.connect(db).then(() => console.log('MongoDb connected')).catch(err => console.log(err));
+mongoose
+    .connect(db)
+    .then(() => console.log('MongoDb connected'))
+    .catch(err => console.log(err));
 
 // First route
 app.get('/', (req, res) => res.send('Hello'));
