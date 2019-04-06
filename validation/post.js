@@ -25,7 +25,3 @@ module.exports = function validatePostInput(data) {
     isValid: isEmpty(errors)
   };
 };
-
-
-
-  // found at: https://www.npmjs.com/package/validate-image-url
