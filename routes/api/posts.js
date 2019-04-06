@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-<<<<<<< HEAD
 const mongoose = require('mongoose');
 const passport = require('passport');
 
@@ -217,9 +216,5 @@ router.delete(
   }
 );
 
-=======
-
-router.get('/test', (req, res) => res.json({msg: 'Posts api works'}));
->>>>>>> 620ac38eba4663e0872a24b7e7e431025fa870e7
 
 module.exports = router;
