@@ -1,4 +1,4 @@
 module.exports = {
-    mongoURI: 'mongodb+srv://Team:learn2code@cluster0-8cjf4.azure.mongodb.net/test?retryWrites=true',
+    mongoURI: 'mongodb://kimn8684:password123@ds012889.mlab.com:12889/instagram_bootcamp',
     secretOrKey: 'secret',
 }
