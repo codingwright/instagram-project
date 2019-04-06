@@ -12,7 +12,6 @@ const promise = validator({url: data.image, timeout: 10000})
     errors.image = 'Must be a valid image URL.';
   })
 
-
   // If image field is empty
 
 module.exports = function validatePostInput(data) {
